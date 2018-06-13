@@ -1,5 +1,5 @@
 import unittest
-from media.name_generator import generate_name
+from media.generate_name import generate_name
 import re
 
 class TestNameGenerator(unittest.TestCase):
@@ -10,4 +10,3 @@ class TestNameGenerator(unittest.TestCase):
     regexp = re.compile(r'^uploads\/[0-9a-f-]{36}\/gamma\.jpg$')
     assert n1 != n2
     assert regexp.search(n1)
-    
